@@ -11,8 +11,7 @@ def input_manual_auto():
         print("Choose Option for", checklist_page[i], "Checklist")
         print("1: Auto")
         print("2: Manual")
-        option.append(1)
-        #option.append(int(input()))
+        option.append(int(input()))
 
 def select_number():
     number = list(range(1, 46))
@@ -29,19 +28,16 @@ def select_number():
             print(checklist_page[i], "is Manual.")
         print("Choose 6 number on", checklist_page[i]," checklist")
         select = []
-        test = 1    # 삭제
         for j in range(6):
             print("Number", j + 1)
             while (1):
-                test = test
-                #test = int(input())
+                test = int(input())
                 if test not in select and test in number:
                     select.append(test)
                     break
                 else:
                     print("You already input this number or wrong number."
                           "Input range is 1~45. Please try another number.")
-            test += 1   #삭제
         checklist_number.append(select)
 
 def auto():
